@@ -1,0 +1,6 @@
+category: Net
+requires: libzephyr4 libcom_err-devel libiconv libkrb5-devel
+external-source: zephyr
+sdesc: "Zephyr instant messaging protocol library (development)"
+ldesc: "Zephyr is an institutional/enterprise-scale distributed 
+real-time messaging and notification system."

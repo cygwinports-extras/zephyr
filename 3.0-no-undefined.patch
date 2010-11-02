@@ -1,0 +1,11 @@
+--- origsrc/zephyr-3.0/lib/Makefile.in	2009-07-15 09:34:02.000000000 -0500
++++ src/zephyr-3.0/lib/Makefile.in	2010-11-02 10:42:19.251701000 -0500
+@@ -48,7 +48,7 @@ OBJS =	zephyr_err.lo ZAsyncLocate.lo ZCk
+ all: libzephyr.la
+ 
+ libzephyr.la: ${OBJS}
+-	${LIBTOOL} --mode=link ${CC} -rpath ${libdir} -version-info 4:0:0 \
++	${LIBTOOL} --mode=link ${CC} -rpath ${libdir} -version-info 4:0:0 -no-undefined \
+ 	  ${LDFLAGS} -o $@ ${OBJS} ${LIBS}
+ 
+ zephyr_err.c ${BUILDTOP}/h/zephyr/zephyr_err.h: zephyr_err.et

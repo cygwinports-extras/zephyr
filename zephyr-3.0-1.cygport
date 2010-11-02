@@ -1,0 +1,21 @@
+DESCRIPTION="Zephyr instant messaging protocol"
+HOMEPAGE="http://zephyr.1ts.org/"
+SRC_URI="http://zephyr.1ts.org/export/HEAD/distribution/${P}.tar.gz"
+
+PATCH_URI="
+	3.0-no-undefined.patch
+	3.0-ensure-dir.patch
+"
+
+PKG_NAMES="zephyr libzephyr4 libzephyr-devel"
+zephyr_CONTENTS="--exclude=*.dll etc/ usr/bin/ usr/sbin/ usr/share/"
+libzephyr4_CONTENTS="usr/bin/*-4.dll"
+libzephyr_devel_CONTENTS="usr/include/ usr/lib/"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	sed -e '/^# libtool.m4/,$d' aclocal.m4 > acinclude.m4
+	rm -f aclocal.m4
+}
+
+CYGCONF_ARGS="--with-krb5=/usr"
