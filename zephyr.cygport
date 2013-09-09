@@ -1,4 +1,10 @@
-DESCRIPTION="Zephyr instant messaging protocol"
+NAME="zephyr"
+VERSION=3.0
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="Zephyr instant messaging server and core clients"
+DESCRIPTION="Zephyr is an institutional/enterprise-scale distributed
+real-time messaging and notification system."
 HOMEPAGE="http://zephyr.1ts.org/"
 SRC_URI="http://zephyr.1ts.org/export/HEAD/distribution/${P}.tar.gz"
 
@@ -9,7 +15,11 @@ PATCH_URI="
 
 PKG_NAMES="zephyr libzephyr4 libzephyr-devel"
 zephyr_CONTENTS="--exclude=*.dll etc/ usr/bin/ usr/sbin/ usr/share/"
+libzephyr4_CATEGORY="Libs"
+libzephyr4_SUMMARY="Zephyr instant messaging protocol library"
 libzephyr4_CONTENTS="usr/bin/*-4.dll"
+libzephyr_devel_CATEGORY="Libs"
+libzephyr_devel_SUMMARY="Zephyr instant messaging protocol library"
 libzephyr_devel_CONTENTS="usr/include/ usr/lib/"
 
 CYGPORT_USE_UNSTABLE_API=1

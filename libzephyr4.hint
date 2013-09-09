@@ -1,6 +1,0 @@
-category: Net
-requires: libasn1_8 libcom_err2 libiconv2 libkrb5_26
-external-source: zephyr
-sdesc: "Zephyr instant messaging protocol library (runtime)"
-ldesc: "Zephyr is an institutional/enterprise-scale distributed 
-real-time messaging and notification system."

@@ -1,5 +1,0 @@
-category: Net
-requires: libcom_err2 libkrb5_26 libncurses10 libss2 libX11_6 libzephyr4
-sdesc: "Zephyr instant messaging server and core clients"
-ldesc: "Zephyr is an institutional/enterprise-scale distributed 
-real-time messaging and notification system."
