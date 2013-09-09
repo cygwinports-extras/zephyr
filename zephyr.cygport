@@ -1,16 +1,15 @@
 NAME="zephyr"
-VERSION=3.0
+VERSION=3.0.2
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Zephyr instant messaging server and core clients"
 DESCRIPTION="Zephyr is an institutional/enterprise-scale distributed
 real-time messaging and notification system."
 HOMEPAGE="http://zephyr.1ts.org/"
-SRC_URI="http://zephyr.1ts.org/export/HEAD/distribution/${P}.tar.gz"
+SRC_URI="http://zephyr.1ts.org/files/zephyr-${VERSION}.tar.gz"
 
 PATCH_URI="
 	3.0-no-undefined.patch
-	3.0-ensure-dir.patch
 "
 
 PKG_NAMES="zephyr libzephyr4 libzephyr-devel"
@@ -22,10 +21,4 @@ libzephyr_devel_CATEGORY="Libs"
 libzephyr_devel_SUMMARY="Zephyr instant messaging protocol library"
 libzephyr_devel_CONTENTS="usr/include/ usr/lib/"
 
-CYGPORT_USE_UNSTABLE_API=1
-src_unpack_hook() {
-	sed -e '/^# libtool.m4/,$d' aclocal.m4 > acinclude.m4
-	rm -f aclocal.m4
-}
-
-CYGCONF_ARGS="--with-krb5=/usr"
+CYGCONF_ARGS="--with-krb5=/usr ac_cv_lib_iconv_iconv_open=yes"
