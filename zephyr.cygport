@@ -1,6 +1,6 @@
 NAME="zephyr"
 VERSION=3.0.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Net"
 SUMMARY="Zephyr instant messaging server and core clients"
 DESCRIPTION="Zephyr is an institutional/enterprise-scale distributed
